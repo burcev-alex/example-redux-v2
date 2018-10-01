@@ -1,16 +1,16 @@
 export const initialState = {
     user: {
-        id: 1,
-        name: "Vasya Pupkin"
+        login: "",
+        pass: ""
     }
 };
 
 export function rootReducers(state = initialState, action) {
     switch (action.type) {
-        case "SET_NAME":
+        case "LOGIN":
             return {
                 ...state,
-                name: action.payload
+                user: action.payload
             };
         default:
             return state;
